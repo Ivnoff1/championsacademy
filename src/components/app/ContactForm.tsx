@@ -30,7 +30,10 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = (data: FormType) => console.log(data);
+  const onSubmit = (data: FormType) => {
+    console.log(data);
+    form.reset();
+  };
 
   return (
     <section className="bg-black min-h-screen flex items-stretc" id="contacto">
@@ -61,7 +64,7 @@ export default function ContactForm() {
                       <span className="text-destructive">*</span> Nombre
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Input className="text-white" {...field} />
                     </FormControl>
                   </FormItem>
                 )}
@@ -74,7 +77,7 @@ export default function ContactForm() {
                   <FormItem>
                     <FormLabel className="text-white">Apellidos</FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Input className="text-white" {...field} />
                     </FormControl>
                   </FormItem>
                 )}
@@ -82,14 +85,15 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="name"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-white">
-                      <span className="text-destructive">*</span> Correo electrónico
+                      <span className="text-destructive">*</span> Correo
+                      electrónico
                     </FormLabel>
                     <FormControl>
-                      <Input {...field} />
+                      <Input className="text-white" {...field} />
                     </FormControl>
                   </FormItem>
                 )}
@@ -105,7 +109,10 @@ export default function ContactForm() {
                       <span className="text-muted-foreground">(opcional)</span>
                     </FormLabel>
                     <FormControl>
-                      <Textarea {...field} className="min-h-[120px]" />
+                      <Textarea
+                        {...field}
+                        className="min-h-[120px] text-white"
+                      />
                     </FormControl>
                   </FormItem>
                 )}

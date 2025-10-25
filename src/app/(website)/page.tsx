@@ -11,7 +11,7 @@ export default function page() {
   return (
     <>
       <Hero
-        className="min-h-[75vh] mb-10"
+        className="min-h-[95vh] mb-10"
         title="¡ÚNETE A CHAMPIONS SOCCER ACADEMY!"
         subtitle="La academia con más campeonatos año tras año."
         ctaText="Contáctanos"
